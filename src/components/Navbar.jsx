@@ -8,7 +8,7 @@ const Navbar = () => {
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <ContactIcon className="w-8 h-8" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Contact Book
+            ContactBook
           </span>
         </a>
       </div>

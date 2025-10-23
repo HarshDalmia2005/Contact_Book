@@ -64,7 +64,7 @@ const MainPage = () => {
                 <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
                   Contacts
                 </h1>
-                <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 mt-0.5">
+                <p className="text-sm none sm:visible text-start sm:text-base text-gray-500 dark:text-gray-400 mt-0.5">
                   Manage your personal and professional network
                 </p>
               </div>
