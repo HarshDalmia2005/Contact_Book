@@ -140,7 +140,7 @@ const ContactForm = ({ initial = {}, onCancel, onSave }) => {
                     className="
             w-full sm:w-auto px-6 py-3 
             flex items-center justify-center gap-2 
-            bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 
+            bg-linear-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 
             text-white 
             font-medium rounded-lg shadow-lg hover:shadow-blue-500/30
             transition-all duration-200 transform hover:scale-105 active:scale-95

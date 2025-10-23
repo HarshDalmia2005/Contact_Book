@@ -51,13 +51,12 @@ const MainPage = () => {
   return (
     <div className="min-h-screen w-full  transition-colors duration-300 pt-8">
       <div className="w-full px-2 sm:px-6 md:px-10 py-10">
-        {/* Header */}
         <div className="mb-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
             <div className="flex items-center gap-2">
               <div className="relative shrink-0">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur-xl opacity-30"></div>
-                <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 p-2 rounded-2xl shadow-lg">
+                <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-500 rounded-2xl blur-xl opacity-30"></div>
+                <div className="relative bg-linear-to-br from-blue-500 to-purple-600 p-2 rounded-2xl shadow-lg">
                   <Users className="w-7 h-7 text-white" />
                 </div>
               </div>
@@ -72,7 +71,7 @@ const MainPage = () => {
             </div>
 
             <button
-              className="flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 active:scale-95"
+              className="flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-3 bg-linear-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 active:scale-95"
               onClick={handleAdd}
             >
               <Plus className="w-5 h-5" />
@@ -80,13 +79,12 @@ const MainPage = () => {
             </button>
           </div>
 
-          {/* Search Bar */}
+        
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-4">
             <SearchBar value={query} onChange={setQuery} />
           </div>
         </div>
 
-        {/* Contacts List */}
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
           {filtered.length > 0 && (
             <div className="mb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
@@ -111,8 +109,6 @@ const MainPage = () => {
           />
         </div>
       </div>
-
-      {/* Modals */}
       <Modal open={formOpen} onClose={() => setFormOpen(false)}>
         <ContactForm
           initial={editing || {}}

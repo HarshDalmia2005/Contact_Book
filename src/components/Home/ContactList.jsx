@@ -7,8 +7,8 @@ const ContactList = ({ contacts, onEdit, onDelete }) => {
     return (
       <div className="flex flex-col items-center justify-center py-16 px-4">
         <div className="relative mb-6">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
-          <div className="relative bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-full">
+          <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+          <div className="relative bg-linear-to-br from-blue-50 to-purple-50 p-6 rounded-full">
             <Users className="w-12 h-12 text-blue-600" />
           </div>
         </div>
@@ -30,7 +30,7 @@ const ContactList = ({ contacts, onEdit, onDelete }) => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-2 rounded-lg shadow-lg">
+          <div className="bg-linear-to-br from-blue-500 to-purple-600 p-2 rounded-lg shadow-lg">
             <Users className="w-5 h-5 text-white" />
           </div>
           <div>
@@ -58,7 +58,7 @@ const ContactList = ({ contacts, onEdit, onDelete }) => {
             <ContactCard
               contact={c}
               onEdit={() => onEdit(c)}
-              onDelete={() => onDelete(c)}
+              onDelete={() => onDelete(c.id)}
             />
           </div>
         ))}

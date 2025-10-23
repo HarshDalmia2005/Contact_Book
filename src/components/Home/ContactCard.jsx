@@ -33,13 +33,13 @@ const ContactCard = ({ contact, onEdit, onDelete }) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <div className="absolute -inset-px bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"></div>
+            <div className="absolute -inset-px bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"></div>
 
             <div className="relative p-3 sm:p-4">
                 <div className="flex flex-col justify-between sm:flex-row sm:items-center gap-3">
                     <div className="flex gap-4">
                         <div
-                            className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${getAvatarGradient(contact.name)} flex items-center justify-center text-white font-bold text-sm sm:text-base shadow-lg transform group-hover:scale-105 transition-transform duration-300`}
+                            className={`shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-linear-to-br ${getAvatarGradient(contact.name)} flex items-center justify-center text-white font-bold text-sm sm:text-base shadow-lg transform group-hover:scale-105 transition-transform duration-300`}
                         >
                             {getInitials(contact.name)}
                         </div>
@@ -51,7 +51,7 @@ const ContactCard = ({ contact, onEdit, onDelete }) => {
 
                             <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-1 sm:gap-2 text-xs sm:text-sm">
                                 <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
-                                    <Mail className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+                                    <Mail className="w-3 h-3 sm:w-4 sm:h-4 shrink-0" />
                                     <span className="truncate">{contact.email}</span>
                                 </div>
 
@@ -61,7 +61,7 @@ const ContactCard = ({ contact, onEdit, onDelete }) => {
                                             •
                                         </span>
                                         <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
-                                            <Phone className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+                                            <Phone className="w-3 h-3 sm:w-4 sm:h-4 shrink-0" />
                                             <span className="truncate">{contact.phone}</span>
                                         </div>
                                     </>
@@ -69,7 +69,7 @@ const ContactCard = ({ contact, onEdit, onDelete }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex  sm:flex-row gap-2 flex-shrink-0 l">
+                    <div className="flex  sm:flex-row gap-2 shrink-0 l">
                         <button
                             onClick={() => onEdit(contact)}
                             className="p-2 w-full  sm:p-2.5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-all duration-200 shadow-sm hover:shadow-md transform hover:scale-110 active:scale-95 flex justify-center"
@@ -90,7 +90,7 @@ const ContactCard = ({ contact, onEdit, onDelete }) => {
             </div>
 
             <div
-                className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transform origin-left transition-transform duration-300 ${isHovered ? "scale-x-100" : "scale-x-0"}`}
+                className={`absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 transform origin-left transition-transform duration-300 ${isHovered ? "scale-x-100" : "scale-x-0"}`}
             ></div>
         </div>
     );

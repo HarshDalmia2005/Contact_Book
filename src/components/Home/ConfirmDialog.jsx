@@ -27,7 +27,7 @@ const ConfirmDialog = ({
 
         <div className="p-6">
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-lg">
+            <div className="shrink-0 w-12 h-12 rounded-full bg-linear-to-br from-red-500 to-red-600 flex items-center justify-center shadow-lg">
               <AlertTriangle className="w-6 h-6 text-white" />
             </div>
 
@@ -50,7 +50,7 @@ const ConfirmDialog = ({
             </button>
             <button
               onClick={onConfirm}
-              className="flex-1 px-4 py-2.5 rounded-lg bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 active:scale-95"
+              className="flex-1 px-4 py-2.5 rounded-lg bg-linear-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 active:scale-95"
             >
               Delete
             </button>
